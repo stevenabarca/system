@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&family=Roboto:wght@100;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+}
+.newcc{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+    text-transform: uppercase;
+}
+.newcc form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+}
+.newcc form .inputbox{
+    margin-top: 20px;
+}
+.newcc form .inputbox span{
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
+.newcc form .inputbox input,
+.newcc form .inputbox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,0.3);
+    color: #444;
+}
+.newcc form .flexbox{
+    display: flex;
+    gap: 15px;
+}
+.newcc form .flexbox .inputbox{
+    flex: 1 1 150px;
+}
+.newcc form .submitbtn{
+    width: 100%;
+    background:linear-gradient(45deg, blueviolet, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+.newcc form .submitbtn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+@media only screen and (max-width: 1000px){
+    .newcc form{
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 10px 15px rgba(0,0,0,.1);
+        padding: 5px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .newcc form{
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 10px 15px rgba(0,0,0,.1);
+        padding: 5px;
+        width: 400px;
+    }
+}

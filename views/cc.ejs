@@ -1,0 +1,200 @@
+<%- include('basec') -%>
+
+<div class="container-dash">
+    <nav>
+        <div class="logo-name">
+          <div class="logo-image">
+             <img src="/static/images/rocketoken.png" alt="">
+          </div>  
+
+          <span class="logo_name">CityBank</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="navlinks">
+              <li >
+                  <a href = "./dashboard">
+                      <i class="uil uil-estate"></i>
+                          <span class="link">Dashboard</span>
+                  </a>
+              </li>
+              <li >
+                  <a href = "./cc"> 
+                      <i class="uil uil-card-atm"></i>
+                          <span class="link">Credit Cards</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./bp">
+                      <i class="uil uil-invoice"></i>
+                          <span class="link">Bill Pay</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./loans">
+                      <i class="uil uil-envelope-upload"></i>
+                          <span class="link">Loans</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./summary">
+                      <i class="uil uil-file-question-alt"></i>
+                          <span class="link">Summary</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./transfer">
+                      <i class="uil uil-exchange"></i>
+                          <span class="link">Transfer</span>
+                  </a>
+              </li> 
+              <li>
+                  <a href = "./profile.html">
+                      <i class="uil uil-user-circle"></i>
+                          <span class="link">Profile</span>
+                  </a>
+              </li> 
+                 
+            </ul>
+
+            <ul class="logout-dash">
+              <li><a href="/route/logout">
+                  <i class="uil uil-signout"></i>
+                  <span class="link">Logout</span>
+              </a></li>
+
+              <li class="mode">
+                  <a href="#">
+                  <i class="uil uil-moon"></i>
+                  <span class="link">Dark Mode</span>
+              </a>
+              
+              <div class="mode-toggle">
+                  <span class="switch"></span>
+              </div>
+              </li>
+              
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="dashboard active" data-tab="1">
+      <div class="top">
+          <i class="uil uil-bars sidebar-toggle"></i>
+
+          <div class="search-box">
+              <i class="uil uil-search"></i>
+              <input type="text" placeholder="Search here...">
+          </div>
+
+          <img src="/static/images/rocketoken.png" alt="">
+      </div>
+     
+      <div class="dash-content">
+          <div class="overview">
+              <div class="title">
+                  <i class="uil uil-card-atm"></i>
+                  <span class="text">Credit Card</span>
+              </div>
+
+      <div class="newcc">
+          <form action="" class="applycc">
+              <div class="inputbox">
+                  <span>Card number</span>
+                  <input type="text" maxlength="16" class="card-number-input">
+              </div>
+              
+              <div class="inputbox">
+                  <span>Card holder</span>
+                  <input type="text" class="card-holder-input">
+              </div>
+
+              <div class="flexbox">
+                  <div class="inputbox">
+                      <span>expiration mm</span>
+                      <select name="" id="" class="month-input">
+                          <option value="month" selected disabled>month</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                      </select>
+                  </div>
+
+                  <div class="inputbox">
+                      <span>expiration yy</span>
+                      <select name="" id="" class="year-input">
+                          <option value="year" selected disabled>year</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                          <option value="2026">2026</option>
+                          <option value="2027">2027</option>
+                          <option value="2028">2028</option>
+                          <option value="2029">2029</option>
+                          <option value="2030">2030</option>
+                      </select>
+                  </div>
+
+                  <div class="inputbox">
+                      <span>cvv</span>
+                      <input type="text" maxlength="4" class="cvv-input">
+                  </div>
+              </div>
+              <input type="submit" value="submit" class="submitbtn">
+          </form>
+      </div>
+             
+  </div>
+
+  <script>
+    const container_dash = document.querySelector('.container-dash');
+    const modeToggle = document.querySelector('.mode-toggle');
+    const sidebar = document.querySelector('nav');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    
+    let getMode = localStorage.getItem("mode");
+    if(getMode && getMode ==="dark"){
+        container_dash.classList.toggle('dark');
+    }
+    
+    let getStatus = localStorage.getItem("status");
+    if(getStatus && getStatus ==="close"){
+        sidebar.classList.toggle('close');
+    }
+    
+    modeToggle.addEventListener("click", () =>{
+        container_dash.classList.toggle('dark');
+        if(container_dash.classList.contains("dark")){
+            localStorage.setItem("mode", "dark");
+        }else{
+            localStorage.setItem("mode", "light");
+        }
+    });
+    
+    sidebarToggle.addEventListener("click", () =>{
+        sidebar.classList.toggle('close');
+        if(sidebar.classList.contains("close")){
+            localStorage.setItem("status", "close");
+        }else{
+            localStorage.setItem("status", "open");
+        }
+    });
+    
+    
+    
+    </script>
+    
+
+  <%- include('footerc') -%>

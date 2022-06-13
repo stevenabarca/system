@@ -1,0 +1,213 @@
+<%- include('bases') -%>
+
+<div class="container-dash">
+    <nav>
+        <div class="logo-name">
+          <div class="logo-image">
+             <img src="/static/images/rocketoken.png" alt="">
+          </div>  
+
+          <span class="logo_name">CityBank</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="navlinks">
+              <li >
+                  <a href = "./dashboard">
+                      <i class="uil uil-estate"></i>
+                          <span class="link">Dashboard</span>
+                  </a>
+              </li>
+              <li >
+                  <a href = "./cc"> 
+                      <i class="uil uil-card-atm"></i>
+                          <span class="link">Credit Cards</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./bp">
+                      <i class="uil uil-invoice"></i>
+                          <span class="link">Bill Pay</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./loans">
+                      <i class="uil uil-envelope-upload"></i>
+                          <span class="link">Loans</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./summary">
+                      <i class="uil uil-file-question-alt"></i>
+                          <span class="link">Summary</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./transfer">
+                      <i class="uil uil-exchange"></i>
+                          <span class="link">Transfer</span>
+                  </a>
+              </li> 
+              <li>
+                  <a href = "./profile">
+                      <i class="uil uil-user-circle"></i>
+                          <span class="link">Profile</span>
+                  </a>
+              </li>
+                 
+            </ul>
+
+            <ul class="logout-dash">
+              <li><a href="/route/logout">
+                  <i class="uil uil-signout"></i>
+                  <span class="link">Logout</span>
+              </a></li>
+
+              <li class="mode">
+                  <a href="#">
+                  <i class="uil uil-moon"></i>
+                  <span class="link">Dark Mode</span>
+              </a>
+              
+              <div class="mode-toggle">
+                  <span class="switch"></span>
+              </div>
+              </li>
+              
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="dashboard active" data-tab="1">
+      <div class="top">
+          <i class="uil uil-bars sidebar-toggle"></i>
+
+          <div class="search-box">
+              <i class="uil uil-search"></i>
+              <input type="text" placeholder="Search here...">
+          </div>
+
+          <img src="/static/images/rocketoken.png" alt="">
+      </div>
+     
+      <div class="dash-content">
+          <div class="overview">
+              <div class="title">
+                  <i class="uil uil-file-question-alt"></i>
+                  <span class="text">Summary</span>
+              </div>
+
+          </div>   
+          
+          <div class="boxes">
+              <div class="box box1">
+                  <i class="uil uil-thumbs-up"></i>
+                  <span class="text">Account Balance</span>
+                  <span class="balance">50,250</span>
+              </div>
+              <div class="box box2">
+                  <i class="uil uil-thumbs-up"></i>
+                  <span class="text">Creditcard Balance</span>
+                  <span class="credit">3,720</span>
+              </div>
+              <div class="box box3">
+                  <i class="uil uil-thumbs-up"></i>
+                  <span class="text">PayPal Balance</span>
+                  <span class="paybill">2,495</span>
+              </div>
+          </div>
+      
+      <div class="activity">
+          <div class="title">
+              <i class="uil uil-tachometer-fast-alt"></i>
+              <span class="text">Transaction History</span>
+          </div>
+
+          <div class="activity-data">
+              <div class="data names">
+                  <span class="data-title">Name</span>
+                  <span class="data-list">Berry Blast</span>
+                  <span class="data-list">Berry Blast</span>
+                  <span class="data-list">Berry Blast</span>
+                  <span class="data-list">Berry Blast</span>
+              </div>
+              <div class="data email">
+                  <span class="data-title">Desription</span>
+                  <span class="data-list">PayPal</span>
+                  <span class="data-list">Credit Card</span>
+                  <span class="data-list">Credit Card</span>
+                  <span class="data-list">Paypal</span>
+              </div>
+              <div class="data dates">
+                  <span class="data-title">Date</span>
+                  <span class="data-list">02-05-2022</span>
+                  <span class="data-list">02-05-2022</span>
+                  <span class="data-list">02-05-2022</span>
+                  <span class="data-list">02-05-2022</span>
+              </div>
+              <div class="data debit">
+                  <span class="data-title">Credit</span>
+                  <span class="data-list">50,000</span>
+                  <span class="data-list">-</span>
+                  <span class="data-list">50,000</span>
+                  <span class="data-list">-</span>
+              </div>
+              <div class="data credit">
+                  <span class="data-title">Debit</span>
+                  <span class="data-list">-</span>
+                  <span class="data-list">50,000</span>
+                  <span class="data-list">-</span>
+                  <span class="data-list">50,000</span>
+              </div>
+          </div>
+      </div>   
+
+
+
+
+  </div>
+
+    
+
+  </div>
+
+  <script>
+  const container_dash = document.querySelector('.container-dash');
+  const modeToggle = document.querySelector('.mode-toggle');
+  const sidebar = document.querySelector('nav');
+  const sidebarToggle = document.querySelector('.sidebar-toggle');
+  
+  let getMode = localStorage.getItem("mode");
+  if(getMode && getMode ==="dark"){
+      container_dash.classList.toggle('dark');
+  }
+  
+  let getStatus = localStorage.getItem("status");
+  if(getStatus && getStatus ==="close"){
+      sidebar.classList.toggle('close');
+  }
+  
+  modeToggle.addEventListener("click", () =>{
+      container_dash.classList.toggle('dark');
+      if(container_dash.classList.contains("dark")){
+          localStorage.setItem("mode", "dark");
+      }else{
+          localStorage.setItem("mode", "light");
+      }
+  });
+  
+  sidebarToggle.addEventListener("click", () =>{
+      sidebar.classList.toggle('close');
+      if(sidebar.classList.contains("close")){
+          localStorage.setItem("status", "close");
+      }else{
+          localStorage.setItem("status", "open");
+      }
+  });
+  
+  
+  
+  </script>
+
+  <%- include('footers') -%>

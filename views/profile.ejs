@@ -1,0 +1,156 @@
+<%- include('basep') -%>
+
+
+<div class="container-dash">
+    <nav>
+        <div class="logo-name">
+          <div class="logo-image">
+             <img src="/static/images/rocketoken.png" alt="">
+          </div>  
+
+          <span class="logo_name">CityBank</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="navlinks">
+              <li >
+                  <a href = "./dashboard">
+                      <i class="uil uil-estate"></i>
+                          <span class="link">Dashboard</span>
+                  </a>
+              </li>
+              <li >
+                  <a href = "./cc"> 
+                      <i class="uil uil-card-atm"></i>
+                          <span class="link">Credit Cards</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./bp">
+                      <i class="uil uil-invoice"></i>
+                          <span class="link">Bill Pay</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./loans">
+                      <i class="uil uil-envelope-upload"></i>
+                          <span class="link">Loans</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./summary">
+                      <i class="uil uil-file-question-alt"></i>
+                          <span class="link">Summary</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./transfer">
+                      <i class="uil uil-exchange"></i>
+                          <span class="link">Transfer</span>
+                  </a>
+              </li> 
+              <li>
+                  <a href = "./profile">
+                      <i class="uil uil-user-circle"></i>
+                          <span class="link">Profile</span>
+                  </a>
+              </li>
+                 
+            </ul>
+
+            <ul class="logout-dash">
+              <li><a href="/route/logout">
+                  <i class="uil uil-signout"></i>
+                  <span class="link">Logout</span>
+              </a></li>
+
+              <li class="mode">
+                  <a href="#">
+                  <i class="uil uil-moon"></i>
+                  <span class="link">Dark Mode</span>
+              </a>
+              
+              <div class="mode-toggle">
+                  <span class="switch"></span>
+              </div>
+              </li>
+              
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="dashboard active" data-tab="1">
+      <div class="top">
+          <i class="uil uil-bars sidebar-toggle"></i>
+
+          <div class="search-box">
+              <i class="uil uil-search"></i>
+              <input type="text" placeholder="Search here...">
+          </div>
+
+          <img src="/static/images/profilep.jpg" alt="">
+      </div>
+     
+      <div class="dash-content">
+          <div class="overview">
+              <div class="title">
+                  <i class="uil uil-user-circle"></i>
+                  <span class="text">Profile</span>
+              </div>
+      
+      <div class="profile">
+          <form action="" class="proline">
+              <div class="paybox"><label>Name : Mr Jane Doe</label></div>
+              <div class="paybox"><label>Address : Orange , CA</label></div>
+              <div class="paybox"><label>Account Number: 6281278202</label></div>
+              <div class="paybox"><label>Date Opened : 2002/09/01</label></div>
+              <div class="paybox"><label>Bank Branch : Orange</label></div>
+              <div class="paybox"><label>Account Type : Personal</label></div>
+                  
+          </form>
+       </div>        
+
+  </div>
+
+  <script>
+    const container_dash = document.querySelector('.container-dash');
+    const modeToggle = document.querySelector('.mode-toggle');
+    const sidebar = document.querySelector('nav');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    
+    let getMode = localStorage.getItem("mode");
+    if(getMode && getMode ==="dark"){
+        container_dash.classList.toggle('dark');
+    }
+    
+    let getStatus = localStorage.getItem("status");
+    if(getStatus && getStatus ==="close"){
+        sidebar.classList.toggle('close');
+    }
+    
+    modeToggle.addEventListener("click", () =>{
+        container_dash.classList.toggle('dark');
+        if(container_dash.classList.contains("dark")){
+            localStorage.setItem("mode", "dark");
+        }else{
+            localStorage.setItem("mode", "light");
+        }
+    });
+    
+    sidebarToggle.addEventListener("click", () =>{
+        sidebar.classList.toggle('close');
+        if(sidebar.classList.contains("close")){
+            localStorage.setItem("status", "close");
+        }else{
+            localStorage.setItem("status", "open");
+        }
+    });
+    
+    
+    
+    </script>
+    
+
+  <%- include('footerp') -%>
+  

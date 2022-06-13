@@ -1,0 +1,198 @@
+<%- include('baset') -%>
+
+<div class="container-dash">
+    <nav>
+        <div class="logo-name">
+          <div class="logo-image">
+             <img src="/static/images/rocketoken.png" alt="">
+          </div>  
+
+          <span class="logo_name">CityBank</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="navlinks">
+              <li >
+                  <a href = "./dashboard">
+                      <i class="uil uil-estate"></i>
+                          <span class="link">Dashboard</span>
+                  </a>
+              </li>
+              <li >
+                  <a href = "./cc"> 
+                      <i class="uil uil-card-atm"></i>
+                          <span class="link">Credit Cards</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./bp">
+                      <i class="uil uil-invoice"></i>
+                          <span class="link">Bill Pay</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./loans">
+                      <i class="uil uil-envelope-upload"></i>
+                          <span class="link">Loans</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./summary">
+                      <i class="uil uil-file-question-alt"></i>
+                          <span class="link">Summary</span>
+                  </a>
+              </li>
+              <li>
+                  <a href = "./transfer">
+                      <i class="uil uil-exchange"></i>
+                          <span class="link">Transfer</span>
+                  </a>
+              </li> 
+              <li>
+                  <a href = "./profile">
+                      <i class="uil uil-user-circle"></i>
+                          <span class="link">Profile</span>
+                  </a>
+              </li>
+                 
+            </ul>
+
+            <ul class="logout-dash">
+              <li><a href="/route/logout">
+                  <i class="uil uil-signout"></i>
+                  <span class="link">Logout</span>
+              </a></li>
+
+              <li class="mode">
+                  <a href="#">
+                  <i class="uil uil-moon"></i>
+                  <span class="link">Dark Mode</span>
+              </a>
+              
+              <div class="mode-toggle">
+                  <span class="switch"></span>
+              </div>
+              </li>
+              
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="dashboard active" data-tab="1">
+      <div class="top">
+          <i class="uil uil-bars sidebar-toggle"></i>
+
+          <div class="search-box">
+              <i class="uil uil-search"></i>
+              <input type="text" placeholder="Search here...">
+          </div>
+
+          <img src="/static/images/rocketoken.png" alt="">
+      </div>
+     
+      <div class="dash-content">
+          <div class="overview">
+              <div class="title">
+                  <i class="uil uil-exchange"></i>
+                  <span class="text">Transfer</span>
+              </div>
+      
+      <div class="transfer">
+          <form action="/route/transfer" method="POST" class="transonline">
+              <div class="paybox">
+                  <label>Transaction Date(dd/MM/yy)</label><input type="date" maxlength="16" name="transaction" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>From</label>
+                    <select name="select" class="card-number-input" required>
+                        <option value="1">6281278202</option>
+                    </select>  
+              </div>
+              <div class="paybox">
+                  <label>Adhoc Beneficiary Name</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Beneficiary Address Line1</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Beneficiary Address Line2</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Beneficiary Address Line3</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Beneficiary Country</label>
+                  <select name="select" class="card-number-input" required>
+                    <option>Choose Country</option>
+                    <option value="1">USA</option>
+                    <option value="2">EUROPE(UK)</option>
+                    <option value="3">AUSTRALIA</option>
+                    <option value="4">INDIA</option>
+                    <option value="5">EGYPT</option>
+                    <option value="6">CANADA</option>
+                    <option value="7">DUBAI</option>
+                    <option value="8">ETHOPIA</option>
+                    <option value="9">SOUTH AFRICA</option>
+                    <option value="10">AUSTRALIA</option>
+                    <option value="11">NEW ZEALAND</option>
+                    <option value="12">SWEDEN</option>
+                </select>
+              </div>
+              <div class="paybox">
+                  <label>Amount</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Email Address(For Notification)</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="paybox">
+                  <label>Remarks</label><input type="text" maxlength="16" class="card-number-input" required>
+              </div>
+              <div class="submitbtn">
+                  <input type="submit" value="continue">
+              </div>
+          </form>
+       </div>       
+
+  </div>
+  <script>
+const container_dash = document.querySelector('.container-dash');
+const modeToggle = document.querySelector('.mode-toggle');
+const sidebar = document.querySelector('nav');
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+
+let getMode = localStorage.getItem("mode");
+if(getMode && getMode ==="dark"){
+    container_dash.classList.toggle('dark');
+}
+
+let getStatus = localStorage.getItem("status");
+if(getStatus && getStatus ==="close"){
+    sidebar.classList.toggle('close');
+}
+
+modeToggle.addEventListener("click", () =>{
+    container_dash.classList.toggle('dark');
+    if(container_dash.classList.contains("dark")){
+        localStorage.setItem("mode", "dark");
+    }else{
+        localStorage.setItem("mode", "light");
+    }
+});
+
+sidebarToggle.addEventListener("click", () =>{
+    sidebar.classList.toggle('close');
+    if(sidebar.classList.contains("close")){
+        localStorage.setItem("status", "close");
+    }else{
+        localStorage.setItem("status", "open");
+    }
+});
+
+
+
+</script>
+
+
+  <%- include('footert') -%>
+

@@ -1,0 +1,120 @@
+<%- include('basepp') -%>
+
+<div class="container">
+    <header>
+         <div class="navbar">
+                 <img class="im" src ="/static/images/homelogo.jpg" alt = "">
+             <div class ="nav">
+                     
+                 <img class="seediv" src ="/static/images/see.svg" alt = "">
+                 <img class="seenol" src ="/static/images/nol.svg" alt = "">
+             </div>
+         
+         </div>
+         <div class ="pointers">
+             
+             <div class="help">
+                 <li id="navbar-toggle" class="navbar-toggle"><i class="fas fa-bars"></i></li>
+
+                 <li><a href="#">How can we help?</a></li>
+                 <li><a href="#">Sign On</a></li>
+             </div>
+
+         
+                 <ul id ="">
+                 
+                 <li><a href="#">Credit Cards</a></li>
+                 <li><a href="#">Banking</a></li>
+                 <li><a href="#">Lending</a></li>
+                 <li><a href="#">Investing</a></li>
+                 <li><a href="#">Wealth Management</a></li>
+                 <li><a href="#">Open an Account</a></li>
+                 </ul>
+        </div>
+    </header>        
+
+             
+
+             
+         
+
+         <!--<ul id ="list" class="list">
+             <li><a href="#">Credit Cards</a></li>
+             <li><a href="#">Banking</a></li>
+             <li><a href="#">Lending</a></li>
+             <li><a href="#">Investing</a></li>
+             <li><a href="#">Wealth Management</a></li>
+             <li><a href="#">Open an Account</a></li>
+         </ul>-->
+         <div class = "parag">
+            <h3>Private Policy</h3>
+            <p>The Hilton Hotels - Global Privacy Policy</p>
+            
+            <p>At Hilton, its affiliates and subsidiaries (hereinafter collectively referred to as 
+            “Hilton”, “we” or “us” or “our”), we endeavor to provide our guests outstanding services 
+            and experiences in our hotels and luxury residences around the world. We value your 
+            business and your faith in us in delivering you a superior level of service.</p>
+
+            <p>We recognize that privacy is important to our guests, and hence our Global Privacy
+            Policy explains our practices regarding personal information we collect when you visit 
+            or use our hotels, restaurants, bars, spas, salons, etc. and our website, mobile 
+            applications, or other online products and services or when you fill up a form and 
+            become member of our loyalty programs. We shall protect your personal data, to keep it 
+            secure as per applicable privacy and data protection laws.</p>
+            
+            <h4>DEFINITIONS</h4>
+            <p>In this Privacy Notice, the following definitions are used:</p>
+
+            <p><b>Data</b> - personal information, including sensitive personal information and special 
+            category personal data (as defined under Data Protection Laws) about you, which we 
+            collect, receive or otherwise process in connection with your use of our stores, website
+            and/or mobile application.</p>
+
+            <p><b>Cookies</b> - We collect certain data from cookies, which are pieces of data stored 
+            directly on the computer or mobile device that you are using. Cookies allow us to 
+            collect browser type, time spent on the Online Services, pages visited, referring URL,
+            language preferences, and other aggregated traffic data. We use functional cookies to 
+            obtain the data for security purposes, to facilitate navigation, to display content more 
+            effectively, to collect statistical data, to personalize your experience while using the
+            Online Services, and to recognize your computer to assist your use of the Online Services.
+            We also gather statistical cookie data about use of the Online Services to continually 
+            improve design and functionality, understand how they are used and assist us with resolving 
+            questions. Advertising cookies further allow us to select which advertisements or offers
+            are most likely to appeal to you and display them while you are using the Online Services.
+            We also use them to send marketing emails and to track responses to online advertisements
+            and marketing emails.</p>
+
+            <p><b>Data Protection Laws</b> - any applicable law for the time being in force relating to the
+            processing of Data.</p>
+
+            <p><b>Partners</b> - select third parties (including Tata Group Entities) with whom we 
+            have contracts for the businesses described in this Privacy Notice.</p>
+            
+            <p><b>Service Providers</b> - includes entities which provide services to IHCL and to 
+            whom we may disclose your Data for a specific purpose pursuant to a written contract.</p>
+
+            <p><b>Hilton Hotel</b> - a company incorporated in India whose registered office is at 
+            CA , USA</p>
+
+            <p><b>User or you</b> -  the natural person who accesses our services , websites or 
+            mobile application.</p>
+            
+        </div>  
+
+     <script>
+       const li = document.getElementById("navbar-toggle");
+       const list = document.getElementById("list");
+
+
+       list.style.display ="none";
+       li.addEventListener("click", () =>{
+        if(list.style.display == "none"){
+          list.style.display = "block";
+    
+       }else{
+          list.style.display = "none";
+       }
+     });
+     </script>
+
+     <%- include('footerpp') -%>

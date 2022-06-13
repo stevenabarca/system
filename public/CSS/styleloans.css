@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&family=Roboto:wght@100;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;   
+}
+.loans{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.loans form label{
+    margin-top: 20px;
+}
+label{
+    width: 350px;
+    display: inline-block;
+}
+
+.submitbtn{
+    margin-top: 50px;
+    cursor: pointer;
+   /* padding-left: 460px; */
+    width: 60px;
+    height: 30px;
+}

@@ -1,0 +1,164 @@
+<%- include('header') -%>
+
+<div class="container">
+    <header>
+         <div class="navbar">
+                 <img class="im" src ="/static/images/rocketoken.png" alt = "">
+             <div class ="nav">
+                     
+                 <img class="seediv" src ="/static/images/see.svg" alt = "">
+                 <img class="seenol" src ="/static/images/nol.svg" alt = "">
+             </div>
+         
+         </div>
+         <div class ="pointers">
+             
+             <div class="help">
+                 <li id="navbar-toggle" class="navbar-toggle"><i class="fas fa-bars"></i></li>
+
+                 <li><a href="#">How can we help?</a></li>
+                 <li><a href="#">Sign On</a></li>
+             </div>
+
+         
+                 <ul id ="">
+                 
+                 <li><a href="#">Credit Cards</a></li>
+                 <li><a href="#">Banking</a></li>
+                 <li><a href="#">Lending</a></li>
+                 <li><a href="#">Investing</a></li>
+                 <li><a href="#">Wealth Management</a></li>
+                 <li><a href="#">Open an Account</a></li>
+                 </ul>
+        </div>
+    </header>        
+
+             
+
+             
+         
+
+         <!--<ul id ="list" class="list">
+             <li><a href="#">Credit Cards</a></li>
+             <li><a href="#">Banking</a></li>
+             <li><a href="#">Lending</a></li>
+             <li><a href="#">Investing</a></li>
+             <li><a href="#">Wealth Management</a></li>
+             <li><a href="#">Open an Account</a></li>
+         </ul>-->
+     <div class="landing-content">
+         <div class="infoview">
+             <h1>The Best<br><span>Banking</span><br>Experience</h1>
+             <p class ="textgraph">Lorem Ipsum is simply dummy text the printing<br> and
+                 typesetting standard dummy text<br> ever since the 1500s, whenever it 
+                 <br>printer took a galley of type and</p>
+                 
+                 <button class="btngraph"><a href="#">JOIN US</a></button>
+         </div>   
+
+         <div class="center-card">
+             <img src = "/static/images/3rd.png" class="logincc">
+         </div>
+         
+         <div class="signon">
+             <form action="route/login" method="POST" class="form-signon" id="login">
+                 <h1 class="form__title">Login</h1>
+                 
+                 <div class="form__input-group">
+                     <input type="text" class="form__inputu" id="email" name="email" autofocus autocomplete="off" placeholder="email">
+                     
+                 </div>
+                 <div class="form__input-group">
+                     <input type="password" class="form__inputp" id="password" name="password" autofocus autocomplete="off"  placeholder="Password">
+                     <div class="form__error-message"></div>
+                 </div>
+                 
+                 <button class="form__button" id="submitData" type="submit">Continue</button>
+                 <p class="form__text">
+                     <a href="#" class="form__link">forget your Password</a>
+                 </p>
+                 <p class="form__text">
+                     <a href ="#" class="#" id="linkCreateAccount">Don't have account? Create account</a>
+                 </p>
+             </form>
+         </div>
+     </div>
+
+     <div id =  "reach">
+        <h2>About Us</h2>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining 
+                essentially unchanged. It was popularised in the 1960s with
+                the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+            </p>
+
+                <h4>News Feeds Heading</h4>
+
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining 
+                essentially unchanged. It was popularised in the 1960s with
+                the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+                
+
+            </p>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a
+                type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining 
+                essentially unchanged. It was popularised in the 1960s with
+                the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+
+            </p>
+    </div>
+
+    <div class="malbetter">
+        <div class="careful">
+            <img src = "/static/images/2b.jpg" class="bcful">
+        </div>
+
+        <div class="infolast">
+            <h1>Beware<br><span>Of Scams </span><br>Arising</h1>
+            <p class ="textgraph">Lorem Ipsum is simply dummy text the printing<br> and
+                typesetting standard dummy text<br> ever since the 1500s, whenever it 
+                <br>printer took a galley of type and</p>
+                
+                <button class="btnarising"><a href="#">JOIN US</a></button>
+        </div>   
+
+    </div>
+     <script>
+       const li = document.getElementById("navbar-toggle");
+       const list = document.getElementById("list");
+
+
+       list.style.display ="none";
+       li.addEventListener("click", () =>{
+        if(list.style.display == "none"){
+          list.style.display = "block";
+    
+       }else{
+          list.style.display = "none";
+       }
+     });
+     </script>
+
+     <%- include('footer') -%>

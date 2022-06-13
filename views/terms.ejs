@@ -1,0 +1,104 @@
+<%- include('baseterms') -%>
+
+<div class="container">
+    <header>
+         <div class="navbar">
+                 <img class="im" src ="/static/images/homelogo.jpg" alt = "">
+             <div class ="nav">
+                     
+                 <img class="seediv" src ="/static/images/see.svg" alt = "">
+                 <img class="seenol" src ="/static/images/nol.svg" alt = "">
+             </div>
+         
+         </div>
+         <div class ="pointers">
+             
+             <div class="help">
+                 <li id="navbar-toggle" class="navbar-toggle"><i class="fas fa-bars"></i></li>
+
+                 <li><a href="#">How can we help?</a></li>
+                 <li><a href="#">Sign On</a></li>
+             </div>
+
+         
+                 <ul id ="">
+                 
+                 <li><a href="#">Credit Cards</a></li>
+                 <li><a href="#">Banking</a></li>
+                 <li><a href="#">Lending</a></li>
+                 <li><a href="#">Investing</a></li>
+                 <li><a href="#">Wealth Management</a></li>
+                 <li><a href="#">Open an Account</a></li>
+                 </ul>
+        </div>
+    </header>        
+
+             
+
+             
+         
+
+         <!--<ul id ="list" class="list">
+             <li><a href="#">Credit Cards</a></li>
+             <li><a href="#">Banking</a></li>
+             <li><a href="#">Lending</a></li>
+             <li><a href="#">Investing</a></li>
+             <li><a href="#">Wealth Management</a></li>
+             <li><a href="#">Open an Account</a></li>
+         </ul>-->
+         <div class = "parag">
+            <h3>Refund Policy</h3>
+            <p>When you cancel a booking and are entitled to a refund then we will instruct the refund 
+            right away. The processing will take between 2-4 weeks until the whole amount shows back 
+            on your credit card statement. Reasons for this are the billing cycle of your credit 
+            card company and processing time of the bank. The refund amount depends on numerous 
+            factors such as the hotel’s cancellation policy, time of cancellation and processing fees.
+            For more details see cancellation policy above.</p>
+
+            <p>In case a reservation that you make is not confirmed, we will not charge you anything 
+            on your credit card and release the whole amount that was held on it immediately. Now after
+            we do this, it will still take a maximum of 2-4 weeks for the bank to process this and for
+            the money to show back on your credit card.</p>
+
+            <h4>Cancellation Charges for individual bookings</h4>
+            <p>If cancelled 72 hours prior to the arrival date full refund will be processed. There 
+            will be 5% cancellation charges in case payment is done via Instamojo/Credit/Debit card.</p>
+
+            <p>If cancelled within 0-72 hours prior to Check In date, one night retention will be 
+            charged and balance will be refunded, subject to deduction of 5% cancellation charges 
+            in case payment is done via Instamojo/Credit/Debit card.</p>
+            
+            <h4>Standard Rate</h4>
+            <p>The cancellation is free of charge 7 days prior to the date of arrival, after this time
+            we charge you 90% the room rate as cancellation fee,  if we could not sell the room more.</p>
+
+            <p>Try Contacting us to be clear and getting more info on our Standard rate</p>
+
+            <h4>Non Refundable Rate</h4>
+            <p>For the non refundable bookings are no cancellation or changes possible. In case of a
+                 cancellation, 90% of the total amount will be charged as cancellation fee.</p>
+
+            <p>Free of charge up to 8 weeks perior the date of arrival ( Medica, Drupa  16 weeks), 
+                after this time we'll charge 90% the room rate if we could not sell the room.</p>
+
+
+            
+            
+        </div>  
+     <script>
+       const li = document.getElementById("navbar-toggle");
+       const list = document.getElementById("list");
+
+
+       list.style.display ="none";
+       li.addEventListener("click", () =>{
+        if(list.style.display == "none"){
+          list.style.display = "block";
+    
+       }else{
+          list.style.display = "none";
+       }
+     });
+     </script>
+
+     <%- include('footerterms') -%>

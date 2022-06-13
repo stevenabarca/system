@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&family=Roboto:wght@100;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;   
+}
+.transfer{
+    min-height: 100vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.transfer form label{
+    margin-top: 20px;
+}
+label{
+    width: 350px;
+    display: inline-block;
+}
+.submitbtn{
+    margin-top: 50px;
+    cursor: pointer;
+    background:red;
+    width: 60px;
+    height: 30px;
+}
+
+.button_transfering{
+    border: none;
+    background: rgb(31, 42, 105);
+    position: relative;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'fira Sans', sans-serif;
+    overflow: hidden;
+    border-radius: 5px;
+    min-width: 525px;
+    height: 50px;
+    
+}
+
+.transonline
+.button___progress{
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: red;
+}
+
+@media only screen and (max-width: 1000px){
+    .button_transfering{
+        min-width: 325px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .button_transfering{
+        min-width: 225px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 560px){
+
+}
+
+@media only screen and (max-width: 500px){
+
+}
